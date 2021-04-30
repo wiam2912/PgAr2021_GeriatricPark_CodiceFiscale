@@ -67,6 +67,7 @@ public class GestoreXML {
 		} catch (Exception e) {
 			System.out.println("Errore nell'inizializzazione del reader: ");
 			System.out.println(e.getMessage());
+			System.exit(0); // dato che non c'è il file è inutile che il programma prosegua
 		}
 		return GestoreXML.reader; //in teoria non dovrebbe comunque servire in quanto tutto l'XML viene gestito
 								  //esclusivamente all'interno dei metodi di questa classe.
@@ -84,6 +85,7 @@ public class GestoreXML {
 		} catch (Exception e) {
 			System.out.println("Errore nell'inizializzazione del writer: ");
 			System.out.println(e.getMessage());
+			System.exit(0); // dato che non c'è il file è inutile che il programma prosegua
 		}
 		return GestoreXML.writer; //in teoria non dovrebbe comunque servire in quanto tutto l'XML viene gestito
 		  						  //esclusivamente all'interno dei metodi di questa classe.
